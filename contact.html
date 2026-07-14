@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact HSBC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003f87 0%, #0066cc 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .form-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h2 {
+            color: #003f87;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #003f87;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="phone"],
+        input[type="subject"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #003f87 0%, #0066cc 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .info-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-section h2 {
+            color: #003f87;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info h3 {
+            color: #0066cc;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .social-links h3 {
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #003f87;
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+        }
+
+        footer {
+            background: #003f87;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>Get in Touch with HSBC</p>
+    </header>
+
+    <div class="container">
+        <div class="contact-wrapper">
+            <div class="form-section">
+                <h2>Send us a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="phone" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="subject" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Inquiry Category *</label>
+                        <select id="category" name="category" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="personal">Personal Banking</option>
+                            <option value="commercial">Commercial Banking</option>
+                            <option value="investment">Investment Services</option>
+                            <option value="mortgage">Mortgage & Loans</option>
+                            <option value="support">Customer Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="info-section">
+                <h2>Contact Information</h2>
+
+                <div class="contact-info">
+                    <h3>Customer Service</h3>
+                    <p><strong>Phone:</strong> 1-800-HSBC-NOW (1-800-4722-669)</p>
+                    <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 8:00 PM EST</p>
+                    <p><strong>Saturday:</strong> 9:00 AM - 5:00 PM EST</p>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Email Support</h3>
+                    <p><a href="mailto:support@hsbc.com">support@hsbc.com</a></p>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Headquarters</h3>
+                    <p>HSBC Holdings plc<br>
+                    8 Canada Square<br>
+                    London E14 5HQ<br>
+                    United Kingdom</p>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Regional Offices</h3>
+                    <p><strong>Asia-Pacific:</strong> Hong Kong, Singapore, Shanghai</p>
+                    <p><strong>Europe:</strong> London, Paris, Frankfurt</p>
+                    <p><strong>Americas:</strong> New York, Toronto, Mexico City</p>
+                </div>
+
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="LinkedIn">in</a>
+                    <a href="#" title="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+
+        <section style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: #003f87; margin-bottom: 20px; font-size: 1.8em; border-bottom: 3px solid #0066cc; padding-bottom: 10px;">Frequently Asked Questions</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <h4 style="color: #0066cc; margin-bottom: 10px;">What are your business hours?</h4>
+                    <p>Our customer service team is available Monday through Friday from 8:00 AM to 8:00 PM EST, and Saturday from 9:00 AM to 5:00 PM EST.</p>
+                </div>
+                <div>
+                    <h4 style="color: #0066cc; margin-bottom: 10px;">How long does it take to hear back?</h4>
+                    <p>We typically respond to inquiries within 24 business hours. For urgent matters, please call our customer service line.</p>
+                </div>
+                <div>
+                    <h4 style="color: #0066cc; margin-bottom: 10px;">How can I open an account?</h4>
+                    <p>You can open an account online, by phone, or by visiting one of our local branches. Visit our website for more details.</p>
+                </div>
+                <div>
+                    <h4 style="color: #0066cc; margin-bottom: 10px;">Is my information secure?</h4>
+                    <p>Yes, HSBC uses advanced encryption and security protocols to protect your personal and financial information.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 HSBC Holdings plc. All rights reserved. | The World's Local Bank</p>
+    </footer>
+</body>
+</html>
